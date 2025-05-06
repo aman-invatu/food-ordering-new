@@ -8,6 +8,8 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import DeliverySection from "@/components/DeliverySection";
 import AppPromoSection from "@/components/AppPromoSection";
 import LocationsSection from "@/components/LocationsSection";
+import ReservationSection from "@/components/ReservationSection";
+import SpecialDishesSection from "@/components/SpecialDishesSection";
 
 const Index = () => {
   return (
@@ -17,6 +19,8 @@ const Index = () => {
       <FoodCategoriesSection />
       <RestaurantsSection />
       <PopularFoodSection />
+      <ReservationSection />
+      <SpecialDishesSection />
       <HowItWorksSection />
       <DeliverySection />
       <AppPromoSection />

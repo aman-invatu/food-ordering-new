@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import FoodCategoryCard from "./FoodCategoryCard";
+import { useNavigate } from "react-router-dom";
 
 const foodCategories = [
   {
@@ -50,6 +51,7 @@ const foodCategories = [
 
 const FoodCategoriesSection = () => {
   const scrollContainer = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const scrollLeft = () => {
     if (scrollContainer.current) {
@@ -61,6 +63,11 @@ const FoodCategoriesSection = () => {
     if (scrollContainer.current) {
       scrollContainer.current.scrollBy({ left: 300, behavior: 'smooth' });
     }
+  };
+
+  const handleCategoryClick = (slug: string) => {
+    // Navigate to menu page with the category filter
+    navigate(`/menu?category=${slug}`);
   };
 
   return (
@@ -95,7 +102,7 @@ const FoodCategoriesSection = () => {
           style={{ scrollbarWidth: 'none' }}
         >
           {foodCategories.map((category) => (
-            <div key={category.id} className="w-56">
+            <div key={category.id} className="w-56" onClick={() => handleCategoryClick(category.slug)}>
               <FoodCategoryCard
                 title={category.title}
                 image={category.image}
