@@ -28,7 +28,7 @@ const ReservationSection = () => {
     toast({
       title: "Reservation Submitted",
       description: "We'll confirm your reservation shortly. Thank you!",
-      variant: "success",
+      variant: "default", // Changed from "success" to "default" to match allowed types
     });
     // Reset form
     setFormData({
