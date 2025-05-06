@@ -9,6 +9,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
+            {/* <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1> */}
             <p className="text-lg opacity-90 mb-8">
               We're on a mission to deliver delicious food right to your doorstep. Learn more about our journey, values, and commitment to quality service.
             </p>
