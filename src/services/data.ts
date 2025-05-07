@@ -1081,6 +1081,170 @@ export const categoryData = {
       preparationTime: '4 mins',
       category: 'Affogato'
     }
+  ],
+  breakFast: [
+    {
+      id: "bf1",
+      name: "Classic Pancakes",
+      image: "https://images.unsplash.com/photo-1528207776546-365bb10ee283?ixlib=rb-4.0.3",
+      price: 8.99,
+      description: "Fluffy buttermilk pancakes served with maple syrup, fresh berries, and whipped cream.",
+      rating: 4.8,
+      preparationTime: "10 mins",
+      category: "Breakfast"
+    },
+    {
+      id: "bf2",
+      name: "Avocado Toast",
+      image: "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?ixlib=rb-4.0.3",
+      price: 7.99,
+      description: "Smashed avocado on artisan sourdough toast with cherry tomatoes, microgreens, and a poached egg.",
+      rating: 4.7,
+      preparationTime: "8 mins",
+      category: "Breakfast"
+    },
+    {
+      id: "bf3",
+      name: "Eggs Benedict",
+      image: "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?ixlib=rb-4.0.3",
+      price: 12.99,
+      description: "English muffin topped with Canadian bacon, poached eggs, and hollandaise sauce.",
+      rating: 4.9,
+      preparationTime: "15 mins",
+      category: "Breakfast"
+    },
+    {
+      id: "bf4",
+      name: "Breakfast Burrito",
+      image: "https://images.unsplash.com/photo-1585499583264-27a9d4a7519b?ixlib=rb-4.0.3",
+      price: 9.99,
+      description: "Scrambled eggs, black beans, cheese, and salsa wrapped in a warm tortilla.",
+      rating: 4.6,
+      preparationTime: "12 mins",
+      category: "Breakfast"
+    },
+    {
+      id: "bf5",
+      name: "Belgian Waffles",
+      image: "https://images.unsplash.com/photo-1562376552-329d9b0644f5?ixlib=rb-4.0.3",
+      price: 10.99,
+      description: "Crispy waffles served with fresh strawberries, whipped cream, and maple syrup.",
+      rating: 4.8,
+      preparationTime: "10 mins",
+      category: "Breakfast"
+    },
+    {
+      id: "bf6",
+      name: "Breakfast Bowl",
+      image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3",
+      price: 11.99,
+      description: "Quinoa bowl with roasted vegetables, avocado, poached egg, and tahini dressing.",
+      rating: 4.7,
+      preparationTime: "15 mins",
+      category: "Breakfast"
+    },
+    {
+      id: "bf7",
+      name: "French Toast",
+      image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3",
+      price: 8.99,
+      description: "Thick-cut brioche bread dipped in cinnamon-vanilla custard, served with fresh berries.",
+      rating: 4.8,
+      preparationTime: "12 mins",
+      category: "Breakfast"
+    },
+    {
+      id: "bf8",
+      name: "Breakfast Sandwich",
+      image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-4.0.3",
+      price: 7.99,
+      description: "Egg, cheese, and bacon on a toasted English muffin with a side of hash browns.",
+      rating: 4.6,
+      preparationTime: "8 mins",
+      category: "Breakfast"
+    }
+  ],
+  snacks: [
+    {
+      id: "sn1",
+      name: "Loaded Nachos",
+      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+      price: 7.99,
+      description: "Crispy tortilla chips topped with melted cheese, jalapeños, salsa, and sour cream.",
+      rating: 4.7,
+      preparationTime: "8 mins",
+      category: "Snacks"
+    },
+    {
+      id: "sn2",
+      name: "Mozzarella Sticks",
+      image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80",
+      price: 6.49,
+      description: "Golden-fried mozzarella cheese sticks served with marinara sauce.",
+      rating: 4.6,
+      preparationTime: "7 mins",
+      category: "Snacks"
+    },
+    {
+      id: "sn3",
+      name: "Chicken Tenders",
+      image: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80",
+      price: 8.99,
+      description: "Crispy breaded chicken tenders served with honey mustard dip.",
+      rating: 4.8,
+      preparationTime: "10 mins",
+      category: "Snacks"
+    },
+    {
+      id: "sn4",
+      name: "French Fries",
+      image: "https://images.unsplash.com/photo-1542444459-db68ac1c90b9?auto=format&fit=crop&w=800&q=80",
+      price: 4.99,
+      description: "Classic golden fries, crispy on the outside and fluffy inside.",
+      rating: 4.5,
+      preparationTime: "5 mins",
+      category: "Snacks"
+    },
+    {
+      id: "sn5",
+      name: "Spring Rolls",
+      image: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80",
+      price: 5.99,
+      description: "Vegetable spring rolls served with sweet chili dipping sauce.",
+      rating: 4.6,
+      preparationTime: "6 mins",
+      category: "Snacks"
+    },
+    {
+      id: "sn6",
+      name: "Popcorn Chicken",
+      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+      price: 7.49,
+      description: "Bite-sized crispy chicken pieces, perfect for snacking.",
+      rating: 4.7,
+      preparationTime: "9 mins",
+      category: "Snacks"
+    },
+    {
+      id: "sn7",
+      name: "Garlic Bread",
+      image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80",
+      price: 4.49,
+      description: "Toasted baguette slices topped with garlic butter and herbs.",
+      rating: 4.5,
+      preparationTime: "6 mins",
+      category: "Snacks"
+    },
+    {
+      id: "sn8",
+      name: "Mini Samosas",
+      image: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80",
+      price: 5.99,
+      description: "Crispy pastry filled with spiced potatoes and peas, served with chutney.",
+      rating: 4.8,
+      preparationTime: "8 mins",
+      category: "Snacks"
+    }
   ]
 };
 

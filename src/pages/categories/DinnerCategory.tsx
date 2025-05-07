@@ -13,7 +13,7 @@ const DinnerCategory = () => {
   };
 
   const openDialog = (item: any) => {
-    // Implement your add-to-cart dialog/modal here
+    
     alert(`Add to cart: ${item.name}`);
   };
 

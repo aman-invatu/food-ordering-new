@@ -35,6 +35,8 @@ import DrinksCategory from "@/pages/categories/DrinksCategory";
 import LunchCategory from "@/pages/categories/LunchCategory";
 import DinnerCategory from "@/pages/categories/DinnerCategory";
 import CoffeeCategory from "./pages/categories/CoffeeCategory";
+import BreakFastCategory from "./pages/categories/BreakFastCategory";
+import SnacksCategory from "./pages/categories/SnacksCategory";
 
 
 
@@ -82,12 +84,9 @@ const App = () => (
                 <Route path="/category/dinner" element={<DinnerCategory />} /> {/* Reusing template for now */}
                 <Route path="/category/lunch" element={<LunchCategory />} /> {/* Reusing template for now */}
                 <Route path="/category/coffee" element={<CoffeeCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/breakfast" element={<DrinksCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/desserts" element={<FastFoodCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/snacks" element={<DrinksCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/healthy" element={<FastFoodCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/beverages" element={<DrinksCategory />} /> {/* Reusing template for now */}
-                
+                <Route path="/category/breakfast" element={<BreakFastCategory />} /> {/* Reusing template for now */}
+                  <Route path="/category/snacks" element={<SnacksCategory />} /> {/* Reusing template for now */}
+       
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

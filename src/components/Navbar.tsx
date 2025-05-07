@@ -33,7 +33,6 @@ const Navbar = () => {
     { name: "Lunch", path: "/category/lunch" },
     { name: "Coffee", path: "/category/coffee" },
     { name: "Breakfast", path: "/category/breakfast" },
-    { name: "Desserts", path: "/category/desserts" },
     { name: "Snacks", path: "/category/snacks" },
   ];
 
