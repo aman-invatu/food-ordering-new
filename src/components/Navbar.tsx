@@ -120,9 +120,9 @@ const Navbar = () => {
           <Link to="/restaurants" className="menu-item">
             Restaurants
           </Link>
-          <Link to="/about" className="menu-item">
+          {/* <Link to="/about" className="menu-item">
             About
-          </Link>
+          </Link> */}
           <Link to="/orders" className="menu-item">
             My Orders
           </Link>
