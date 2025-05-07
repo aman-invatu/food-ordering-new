@@ -32,6 +32,11 @@ import ChineseCuisine from "@/pages/cuisines/ChineseCuisine";
 // Category Pages
 import FastFoodCategory from "@/pages/categories/FastFoodCategory";
 import DrinksCategory from "@/pages/categories/DrinksCategory";
+import LunchCategory from "@/pages/categories/LunchCategory";
+import DinnerCategory from "@/pages/categories/DinnerCategory";
+import CoffeeCategory from "./pages/categories/CoffeeCategory";
+
+
 
 const queryClient = new QueryClient();
 
@@ -74,9 +79,9 @@ const App = () => (
                 {/* Category Routes */}
                 <Route path="/category/fast-food" element={<FastFoodCategory />} />
                 <Route path="/category/drinks" element={<DrinksCategory />} />
-                <Route path="/category/dinner" element={<FastFoodCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/lunch" element={<DrinksCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/coffee" element={<FastFoodCategory />} /> {/* Reusing template for now */}
+                <Route path="/category/dinner" element={<DinnerCategory />} /> {/* Reusing template for now */}
+                <Route path="/category/lunch" element={<LunchCategory />} /> {/* Reusing template for now */}
+                <Route path="/category/coffee" element={<CoffeeCategory />} /> {/* Reusing template for now */}
                 <Route path="/category/breakfast" element={<DrinksCategory />} /> {/* Reusing template for now */}
                 <Route path="/category/desserts" element={<FastFoodCategory />} /> {/* Reusing template for now */}
                 <Route path="/category/snacks" element={<DrinksCategory />} /> {/* Reusing template for now */}

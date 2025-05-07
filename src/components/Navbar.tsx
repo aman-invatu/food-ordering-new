@@ -35,8 +35,6 @@ const Navbar = () => {
     { name: "Breakfast", path: "/category/breakfast" },
     { name: "Desserts", path: "/category/desserts" },
     { name: "Snacks", path: "/category/snacks" },
-    { name: "Healthy", path: "/category/healthy" },
-    { name: "Beverages", path: "/category/beverages" },
   ];
 
   const cuisines = [
