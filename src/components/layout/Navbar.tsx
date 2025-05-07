@@ -67,7 +67,7 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="menu-item">Food Categories</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="menu-item">Menu List</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {foodCategories.map((category) => (
