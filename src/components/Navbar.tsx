@@ -18,7 +18,7 @@ const Navbar = () => {
           <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
             <span className="text-white font-bold">F</span>
           </div>
-          <span className="text-2xl font-bold ml-2">Foodie</span>
+          <span className="text-2xl font-bold ml-2">Foodiee</span>
         </Link>
 
         {/* Desktop Navigation */}
