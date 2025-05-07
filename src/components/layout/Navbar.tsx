@@ -39,12 +39,11 @@ const Navbar = () => {
   const cuisines = [
     { name: "Indian", path: "/cuisine/indian" },
     { name: "Chinese", path: "/cuisine/chinese" },
+    { name: "American", path: "/cuisine/american" },
     { name: "Italian", path: "/cuisine/italian" },
     { name: "Mexican", path: "/cuisine/mexican" },
     { name: "Japanese", path: "/cuisine/japanese" },
     { name: "Thai", path: "/cuisine/thai" },
-    { name: "Mediterranean", path: "/cuisine/mediterranean" },
-    { name: "American", path: "/cuisine/american" },
     { name: "French", path: "/cuisine/french" },
     { name: "Korean", path: "/cuisine/korean" },
   ];

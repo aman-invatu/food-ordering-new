@@ -1,76 +1,101 @@
-import { useState } from "react";
-import FoodItemCard from "@/components/FoodItemCard";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { menuItems } from "@/services/data";
+import CategorySection from "./categories/CategorySection";
+import ProductCard from "@/components/products/ProductCard";
+import { categoryData } from "@/services/data";
+
+const burgerImage = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+const pizzaImage = "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+const drinksImage = "https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+const fastFoodImage = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+const startersImage = "https://images.unsplash.com/photo-1541014741257-de529411b96a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+const mainCourseImage = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+
+const burgers = categoryData.fastFood.filter(item => item.category === "Burger");
+const pizzas = categoryData.fastFood.filter(item => item.category === "Pizza");
 
 const Menu = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("all");
-
-  const filteredItems = menuItems[activeTab].filter((item) =>
-    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
   return (
-    <div className="container mx-auto px-4 py-10">
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold mb-4">Our Menu</h1>
-        <p className="text-gray-600 mb-6">
-          Discover our wide range of delicious foods prepared by expert chefs
-        </p>
-
-        <div className="max-w-md mx-auto">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search menu items..."
-              className="w-full px-4 py-2 border rounded-full"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <div className="absolute right-3 top-2.5">
-              <svg
-                className="h-5 w-5 text-gray-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </div>
-          </div>
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-1">
+        <div className="bg-gray-50 py-14 text-center">
+          <h1 className="text-4xl font-thin tracking-[.15em] mb-4 text-gray-800">Menu Grid</h1>
+          <p className="text-1xl text-gray-400 font-extralight tracking-[.15em]">Some informations about our restaurant</p>
         </div>
-      </div>
-
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="mb-8">
-          <TabsTrigger value="all">All Items</TabsTrigger>
-          <TabsTrigger value="burger">Burgers</TabsTrigger>
-          <TabsTrigger value="pizza">Pizza</TabsTrigger>
-          <TabsTrigger value="biryani">Biryani</TabsTrigger>
-          <TabsTrigger value="dessert">Desserts</TabsTrigger>
-        </TabsList>
-
-        <TabsContent value={activeTab}>
-          {filteredItems.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredItems.map((item) => (
-                <FoodItemCard key={item.id} food={item} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-500">No items found matching your search.</p>
-            </div>
-          )}
-        </TabsContent>
-      </Tabs>
+        <div className="container mx-auto px-6 py-12">
+        <CategorySection title="Drinks" imageUrl={drinksImage}>
+            {categoryData.drinks.map((product) => (
+              <ProductCard 
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                imageUrl={product.image}
+              />
+            ))}
+          </CategorySection>
+          <CategorySection title="Burgers" imageUrl={burgerImage}>
+            {burgers.map((product) => (
+              <ProductCard 
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                imageUrl={product.image}
+              />
+            ))}
+          </CategorySection>
+          <CategorySection title="Pizza" imageUrl={pizzaImage}>
+            {pizzas.map((product) => (
+              <ProductCard 
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                imageUrl={product.image}
+              />
+            ))}
+          </CategorySection>
+        
+          <CategorySection title="Fast Food" imageUrl={fastFoodImage}>
+            {categoryData.fastFood.map((product) => (
+              <ProductCard 
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                imageUrl={product.image}
+              />
+            ))}
+          </CategorySection>
+          <CategorySection title="Starters" imageUrl={startersImage}>
+            {categoryData.starters.map((product) => (
+              <ProductCard 
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                imageUrl={product.image}
+              />
+            ))}
+          </CategorySection>
+          <CategorySection title="Main Course" imageUrl={mainCourseImage}>
+            {categoryData.mainCourse.map((product) => (
+              <ProductCard 
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                imageUrl={product.image}
+              />
+            ))}
+          </CategorySection>
+        </div>
+      </main>
     </div>
   );
 };

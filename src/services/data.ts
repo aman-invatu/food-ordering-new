@@ -1245,6 +1245,70 @@ export const categoryData = {
       preparationTime: "8 mins",
       category: "Snacks"
     }
+  ],
+  starters: [
+    {
+      id: "starter1",
+      name: "Bruschetta",
+      image: "https://images.unsplash.com/photo-1541014741257-de529411b96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      price: 5.50,
+      description: "Toasted bread with tomatoes and basil.",
+      rating: 4.7,
+      preparationTime: "8 mins",
+      category: "Starters"
+    },
+    {
+      id: "starter2",
+      name: "Garlic Bread",
+      image: "https://images.unsplash.com/photo-1541014741257-de529411b96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      price: 4.50,
+      description: "Toasted bread with garlic butter.",
+      rating: 4.6,
+      preparationTime: "7 mins",
+      category: "Starters"
+    },
+    {
+      id: "starter3",
+      name: "Mozzarella Sticks",
+      image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80",
+      price: 6.50,
+      description: "Breaded mozzarella with marinara sauce.",
+      rating: 4.8,
+      preparationTime: "10 mins",
+      category: "Starters"
+    }
+  ],
+  mainCourse: [
+    {
+      id: "main1",
+      name: "Grilled Salmon",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      price: 18.00,
+      description: "Fresh salmon with vegetables.",
+      rating: 4.9,
+      preparationTime: "20 mins",
+      category: "Main Course"
+    },
+    {
+      id: "main2",
+      name: "Chicken Parmigiana",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      price: 16.00,
+      description: "Breaded chicken with tomato sauce and cheese.",
+      rating: 4.8,
+      preparationTime: "18 mins",
+      category: "Main Course"
+    },
+    {
+      id: "main3",
+      name: "Vegetable Lasagna",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      price: 14.00,
+      description: "Layers of pasta with vegetables and cheese.",
+      rating: 4.7,
+      preparationTime: "22 mins",
+      category: "Main Course"
+    }
   ]
 };
 
@@ -1412,6 +1476,252 @@ export const cuisineData = {
       rating: 4.9,
       preparationTime: "8 mins",
       category: "Dessert"
+    }
+  ],
+  american: [
+    {
+      id: "a1",
+      name: "Classic Cheeseburger",
+      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3",
+      price: 12.99,
+      description: "Juicy beef patty with American cheese, lettuce, tomatoes, and our special sauce on a toasted bun.",
+      rating: 4.8,
+      preparationTime: "15 mins",
+      category: "Burger"
+    },
+    {
+      id: "a2",
+      name: "BBQ Ribs",
+      image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3",
+      price: 24.99,
+      description: "Slow-cooked pork ribs glazed with our signature BBQ sauce, served with coleslaw and cornbread.",
+      rating: 4.9,
+      preparationTime: "45 mins",
+      category: "Main Course"
+    },
+    {
+      id: "a3",
+      name: "Mac and Cheese",
+      image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3",
+      price: 14.99,
+      description: "Creamy macaroni pasta with a blend of cheddar, mozzarella, and parmesan cheeses, topped with breadcrumbs.",
+      rating: 4.7,
+      preparationTime: "20 mins",
+      category: "Side Dish"
+    },
+    {
+      id: "a4",
+      name: "Chicken Wings",
+      image: "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?ixlib=rb-4.0.3",
+      price: 16.99,
+      description: "Crispy fried chicken wings tossed in your choice of buffalo, BBQ, or honey garlic sauce.",
+      rating: 4.8,
+      preparationTime: "25 mins",
+      category: "Appetizer"
+    },
+    {
+      id: "a5",
+      name: "New York Style Pizza",
+      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3",
+      price: 18.99,
+      description: "Large thin-crust pizza with tomato sauce, mozzarella, and your choice of toppings.",
+      rating: 4.7,
+      preparationTime: "30 mins",
+      category: "Pizza"
+    },
+    {
+      id: "a6",
+      name: "Apple Pie",
+      image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-4.0.3",
+      price: 8.99,
+      description: "Classic American dessert with spiced apple filling in a flaky crust, served with vanilla ice cream.",
+      rating: 4.9,
+      preparationTime: "10 mins",
+      category: "Dessert"
+    },
+    {
+      id: "a7",
+      name: "Grilled Cheese Sandwich",
+      image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3",
+      price: 9.99,
+      description: "Toasted sandwich with melted cheddar and American cheese, served with tomato soup.",
+      rating: 4.6,
+      preparationTime: "12 mins",
+      category: "Sandwich"
+    },
+    {
+      id: "a8",
+      name: "Hot Dog",
+      image: "https://images.unsplash.com/photo-1612392062122-61b3b8f3dcc3?ixlib=rb-4.0.3",
+      price: 7.99,
+      description: "All-beef hot dog in a soft bun with mustard, ketchup, relish, and onions.",
+      rating: 4.5,
+      preparationTime: "8 mins",
+      category: "Sandwich"
+    }
+  ],
+  french: [
+    {
+      id: "f1",
+      name: "Coq au Vin",
+      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3",
+      price: 22.99,
+      description: "Chicken braised with red wine, mushrooms, bacon, and onions for a rich, savory flavor.",
+      rating: 4.8,
+      preparationTime: "45 mins",
+      category: "Main Course"
+    },
+    {
+      id: "f2",
+      name: "Ratatouille",
+      image: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?ixlib=rb-4.0.3",
+      price: 16.99,
+      description: "A classic Provençal vegetable stew with eggplant, zucchini, peppers, and tomatoes.",
+      rating: 4.7,
+      preparationTime: "30 mins",
+      category: "Vegetarian"
+    },
+    {
+      id: "f3",
+      name: "Bouillabaisse",
+      image: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3",
+      price: 28.99,
+      description: "Traditional fish stew from Marseille with assorted seafood, saffron, and herbs.",
+      rating: 4.9,
+      preparationTime: "50 mins",
+      category: "Seafood"
+    },
+    {
+      id: "f4",
+      name: "Quiche Lorraine",
+      image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3",
+      price: 14.99,
+      description: "Savory tart with a creamy filling of eggs, cream, bacon, and cheese.",
+      rating: 4.6,
+      preparationTime: "25 mins",
+      category: "Appetizer"
+    },
+    {
+      id: "f5",
+      name: "Crème Brûlée",
+      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3",
+      price: 9.99,
+      description: "Classic French dessert with a creamy custard base and caramelized sugar crust.",
+      rating: 4.9,
+      preparationTime: "15 mins",
+      category: "Dessert"
+    },
+    {
+      id: "f6",
+      name: "Croissant",
+      image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-4.0.3",
+      price: 5.99,
+      description: "Flaky, buttery pastry, perfect for breakfast or a snack.",
+      rating: 4.7,
+      preparationTime: "10 mins",
+      category: "Bakery"
+    },
+    {
+      id: "f7",
+      name: "French Onion Soup",
+      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?ixlib=rb-4.0.3",
+      price: 12.99,
+      description: "Rich beef broth with caramelized onions, topped with toasted bread and melted cheese.",
+      rating: 4.8,
+      preparationTime: "35 mins",
+      category: "Soup"
+    },
+    {
+      id: "f8",
+      name: "Tarte Tatin",
+      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3",
+      price: 8.99,
+      description: "Upside-down caramelized apple tart, a French classic dessert.",
+      rating: 4.7,
+      preparationTime: "20 mins",
+      category: "Dessert"
+    }
+  ],
+  italian: [
+    {
+      id: "it1",
+      name: "Margherita Pizza",
+      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3",
+      price: 13.99,
+      description: "Classic Neapolitan pizza with fresh mozzarella, tomatoes, basil, and olive oil.",
+      rating: 4.8,
+      preparationTime: "20 mins",
+      category: "Pizza"
+    },
+    {
+      id: "it2",
+      name: "Spaghetti Carbonara",
+      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3",
+      price: 15.99,
+      description: "Pasta with creamy egg sauce, pancetta, parmesan, and black pepper.",
+      rating: 4.7,
+      preparationTime: "18 mins",
+      category: "Pasta"
+    },
+    {
+      id: "it3",
+      name: "Lasagna Bolognese",
+      image: "https://images.unsplash.com/photo-1523987355523-c7b5b0723c6a?ixlib=rb-4.0.3",
+      price: 17.99,
+      description: "Layered pasta with rich meat sauce, béchamel, and mozzarella cheese.",
+      rating: 4.9,
+      preparationTime: "35 mins",
+      category: "Pasta"
+    },
+    {
+      id: "it4",
+      name: "Risotto alla Milanese",
+      image: "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?ixlib=rb-4.0.3",
+      price: 16.99,
+      description: "Creamy risotto with saffron, parmesan, and a touch of butter.",
+      rating: 4.6,
+      preparationTime: "25 mins",
+      category: "Rice"
+    },
+    {
+      id: "it5",
+      name: "Tiramisu",
+      image: "https://images.unsplash.com/photo-1551879401-a2035935a245?ixlib=rb-4.0.3",
+      price: 9.99,
+      description: "Classic Italian dessert with espresso-soaked ladyfingers and mascarpone cream.",
+      rating: 4.9,
+      preparationTime: "10 mins",
+      category: "Dessert"
+    },
+    {
+      id: "it6",
+      name: "Caprese Salad",
+      image: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?ixlib=rb-4.0.3",
+      price: 11.99,
+      description: "Fresh mozzarella, tomatoes, basil, olive oil, and balsamic glaze.",
+      rating: 4.7,
+      preparationTime: "8 mins",
+      category: "Salad"
+    },
+    {
+      id: "it7",
+      name: "Fettuccine Alfredo",
+      image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?ixlib=rb-4.0.3",
+      price: 14.99,
+      description: "Pasta tossed in a creamy parmesan sauce with butter and black pepper.",
+      rating: 4.8,
+      preparationTime: "15 mins",
+      category: "Pasta"
+    },
+    {
+      id: "it8",
+      name: "Bruschetta",
+      image: "https://images.unsplash.com/photo-1541014741257-de529411b96a?ixlib=rb-4.0.3",
+      price: 8.99,
+      description: "Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil.",
+      rating: 4.6,
+      preparationTime: "10 mins",
+      category: "Appetizer"
     }
   ]
 };

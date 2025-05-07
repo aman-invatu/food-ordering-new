@@ -7,8 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "@/context/CartContext";
 
 // Layouts and Components
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 // Pages
 import Index from "@/pages/Index";
@@ -28,6 +28,9 @@ import OrderDetail from "@/pages/OrderDetail";
 // Cuisine Pages
 import IndianCuisine from "@/pages/cuisines/IndianCuisine";
 import ChineseCuisine from "@/pages/cuisines/ChineseCuisine";
+import AmericanCuisine from "./pages/cuisines/AmericalCuisine";
+import FrenchCuisine from "./pages/cuisines/FrenchCuisine";
+import ItalianCuisine from "./pages/cuisines/ItalianCuisine"
 
 // Category Pages
 import FastFoodCategory from "@/pages/categories/FastFoodCategory";
@@ -69,23 +72,23 @@ const App = () => (
                 {/* Cuisine Routes */}
                 <Route path="/cuisine/indian" element={<IndianCuisine />} />
                 <Route path="/cuisine/chinese" element={<ChineseCuisine />} />
-                <Route path="/cuisine/italian" element={<IndianCuisine />} /> {/* Reusing template for now */}
-                <Route path="/cuisine/mexican" element={<ChineseCuisine />} /> {/* Reusing template for now */}
-                <Route path="/cuisine/japanese" element={<IndianCuisine />} /> {/* Reusing template for now */}
-                <Route path="/cuisine/thai" element={<ChineseCuisine />} /> {/* Reusing template for now */}
-                <Route path="/cuisine/mediterranean" element={<IndianCuisine />} /> {/* Reusing template for now */}
-                <Route path="/cuisine/american" element={<ChineseCuisine />} /> {/* Reusing template for now */}
-                <Route path="/cuisine/french" element={<IndianCuisine />} /> {/* Reusing template for now */}
-                <Route path="/cuisine/korean" element={<ChineseCuisine />} /> {/* Reusing template for now */}
+                <Route path="/cuisine/american" element={<AmericanCuisine />} /> 
+                <Route path="/cuisine/italian" element={<ItalianCuisine />} /> 
+                <Route path="/cuisine/mexican" element={<ChineseCuisine />} /> 
+                <Route path="/cuisine/japanese" element={<IndianCuisine />} /> 
+                <Route path="/cuisine/thai" element={<ChineseCuisine />} /> 
+                <Route path="/cuisine/mediterranean" element={<IndianCuisine />} /> 
+                <Route path="/cuisine/french" element={<FrenchCuisine />} /> 
+                <Route path="/cuisine/korean" element={<ChineseCuisine />} /> 
                 
                 {/* Category Routes */}
                 <Route path="/category/fast-food" element={<FastFoodCategory />} />
                 <Route path="/category/drinks" element={<DrinksCategory />} />
-                <Route path="/category/dinner" element={<DinnerCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/lunch" element={<LunchCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/coffee" element={<CoffeeCategory />} /> {/* Reusing template for now */}
-                <Route path="/category/breakfast" element={<BreakFastCategory />} /> {/* Reusing template for now */}
-                  <Route path="/category/snacks" element={<SnacksCategory />} /> {/* Reusing template for now */}
+                <Route path="/category/dinner" element={<DinnerCategory />} /> 
+                <Route path="/category/lunch" element={<LunchCategory />} /> 
+                <Route path="/category/coffee" element={<CoffeeCategory />} /> 
+                <Route path="/category/breakfast" element={<BreakFastCategory />} /> 
+                  <Route path="/category/snacks" element={<SnacksCategory />} /> 
        
                 <Route path="*" element={<NotFound />} />
               </Routes>
