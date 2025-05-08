@@ -35,6 +35,11 @@ const Navbar = () => {
     { name: "Breakfast", path: "/category/breakfast" },
     { name: "Snacks", path: "/category/snacks" },
     { name: "Chai", path: "/category/chai" },
+    { name: "Lassi", path: "/category/lassi" },
+    { name: "Biryani", path: "/category/biryani" },
+    { name: "Paneer", path: "/category/paneer" },
+    { name: "Pickle", path: "/category/pickle" },
+    { name: "Salad", path: "/category/salad" },
   ];
 
   const cuisines = [
@@ -68,7 +73,7 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="menu-item">Menu List</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="menu-item">Food Categories</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {foodCategories.map((category) => (
@@ -119,9 +124,9 @@ const Navbar = () => {
           <Link to="/restaurants" className="menu-item">
             Restaurants
           </Link>
-          {/* <Link to="/about" className="menu-item">
+          <Link to="/about" className="menu-item">
             About
-          </Link> */}
+          </Link>
           <Link to="/orders" className="menu-item">
             My Orders
           </Link>
