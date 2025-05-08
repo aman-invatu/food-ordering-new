@@ -28,7 +28,7 @@ const ProductDialog: React.FC<ProductDialogProps> = ({
   onClose, 
   product 
 }) => {
-  const { addItem } = useCart();
+  const { addToCart } = useCart();
   const { toast } = useToast();
   const [size, setSize] = useState<'normal' | 'double'>('normal');
   const [note, setNote] = useState('');
@@ -70,7 +70,7 @@ const ProductDialog: React.FC<ProductDialogProps> = ({
   };
 
   const handleAddToCart = () => {
-    addItem({
+    addToCart({
       id: product.id,
       name: product.name,
       price: totalPrice,
