@@ -760,7 +760,7 @@ export const categoryData = {
       name: "Classic Milkshake",
       image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-4.0.3",
       price: 6.99,
-      description: "Creamy vanilla milkshake blended with premium ice cream, topped with whipped cream and a cherry.",
+      description: "Creamy vanilla milkshake blended with premium ice cream, topped with whipped cream and a cherry. lassi",
       rating: 4.8,
       preparationTime: "5 mins",
       category: "Milkshakes"
@@ -770,7 +770,7 @@ export const categoryData = {
       name: "Fresh Berry Smoothie",
       image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?ixlib=rb-4.0.3",
       price: 7.99,
-      description: "A refreshing blend of mixed berries, banana, and Greek yogurt for a healthy, delicious treat.",
+      description: "A refreshing blend of mixed berries, banana, and Greek yogurt for a healthy, delicious treat. lassi",
       rating: 4.7,
       preparationTime: "5 mins",
       category: "Smoothies"
@@ -780,7 +780,7 @@ export const categoryData = {
       name: "Iced Caramel Latte",
       image: "https://images.unsplash.com/photo-1592321675774-3de57f3ee0dc?ixlib=rb-4.0.3",
       price: 5.99,
-      description: "Espresso shots combined with milk, caramel syrup, and ice for a sweet, refreshing coffee drink.",
+      description: "Espresso shots combined with milk, caramel syrup, and ice for a sweet, refreshing coffee drink. lassi",
       rating: 4.8,
       preparationTime: "4 mins",
       category: "Coffee"
@@ -800,7 +800,7 @@ export const categoryData = {
       name: "Fresh Lemonade",
       image: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixlib=rb-4.0.3",
       price: 4.99,
-      description: "Freshly squeezed lemon juice mixed with water and sugar, served over ice with a lemon wedge.",
+      description: "Freshly squeezed lemon juice mixed with water and sugar, served over ice with a lemon wedge. lassi",
       rating: 4.6,
       preparationTime: "3 mins",
       category: "Non-Alcoholic"
@@ -810,27 +810,27 @@ export const categoryData = {
       name: "Matcha Green Tea",
       image: "https://images.unsplash.com/photo-1536013631178-0e247b1d442c?ixlib=rb-4.0.3",
       price: 5.49,
-      description: "Premium Japanese matcha powder whisked with hot water for a traditional and healthy tea experience.",
+      description: "Premium Japanese matcha powder whisked with hot water for a traditional and healthy tea experience. lassi",
       rating: 4.7,
       preparationTime: "5 mins",
       category: "Tea"
     },
     {
       id: "d7",
-      name: "Tropical Punch",
+      name: "Tropical Punch lassi",
       image: "https://images.unsplash.com/photo-1596803244535-925769f389fc?ixlib=rb-4.0.3",
       price: 6.99,
-      description: "A vibrant mix of pineapple, orange, and cranberry juices with a splash of lime for a tropical escape.",
+      description: "A vibrant mix of pineapple, orange, and cranberry juices with a splash of lime for a tropical escape. lassi",
       rating: 4.6,
       preparationTime: "4 mins",
       category: "Juice"
     },
     {
       id: "d8",
-      name: "Hot Chocolate",
+      name: "Hot Chocolate ",
       image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?ixlib=rb-4.0.3",
       price: 5.49,
-      description: "Rich, creamy hot chocolate made with premium cocoa, topped with whipped cream and chocolate shavings.",
+      description: "Rich, creamy hot chocolate made with premium cocoa, topped with whipped cream and chocolate shavings. lassi",
       rating: 4.8,
       preparationTime: "5 mins",
       category: "Hot Drinks"
