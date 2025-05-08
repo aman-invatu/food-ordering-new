@@ -23,8 +23,11 @@ const DesktopNav = ({ totalItems, foodCategories, cuisines }: DesktopNavProps) =
         <FoodCategoriesMenu categories={foodCategories} />
         <CuisinesMenu cuisines={cuisines} />
 
-        <Link to="/menu" className="menu-item">
-          Menu
+        <Link to="/menu1" className="menu-item">
+          Menu1
+        </Link>
+        <Link to="/menu2" className="menu-item">
+          Menu2
         </Link>
         <Link to="/restaurants" className="menu-item">
           Restaurants
@@ -39,10 +42,10 @@ const DesktopNav = ({ totalItems, foodCategories, cuisines }: DesktopNavProps) =
 
       {/* Desktop Actions */}
       <div className="hidden md:flex items-center space-x-4">
-        <Button variant="ghost" className="flex items-center text-gray-600">
+        {/* <Button variant="ghost" className="flex items-center text-gray-600">
           <MapPin className="mr-1 h-4 w-4" />
           <span>Set Location</span>
-        </Button>
+        </Button> */}
         <Link to="/cart" className="relative">
           <Button variant="outline" className="flex items-center">
             <ShoppingCart className="mr-1 h-5 w-5" />

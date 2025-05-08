@@ -1,6 +1,6 @@
 
-import CategorySection from "./categories/CategorySection";
-import ProductCard from "@/components/products/ProductCard";
+import CategorySection from "./CategorySection";
+import ProductCard from "./ProductCard";
 import { categoryData } from "@/services/data";
 import { Link } from "react-router-dom";
 
@@ -25,69 +25,22 @@ const Menu = () => {
           <p className="text-1xl text-gray-400 font-extralight tracking-[.15em]">Some informations about our restaurant</p>
         </div>
 
-        {/* Quick category links */}
-        <div className="bg-white py-6 shadow-sm">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center flex-wrap gap-4">
-              <Link to="/category/lassi" className="px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-full text-primary text-sm font-medium transition-colors">
-                Lassi
-              </Link>
-              <Link to="/category/biryani" className="px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-full text-primary text-sm font-medium transition-colors">
-                Biryani
-              </Link>
-              <Link to="/category/paneer" className="px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-full text-primary text-sm font-medium transition-colors">
-                Paneer
-              </Link>
-              <Link to="/category/pickle" className="px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-full text-primary text-sm font-medium transition-colors">
-                Pickle
-              </Link>
-              <Link to="/category/salad" className="px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-full text-primary text-sm font-medium transition-colors">
-                Salad
-              </Link>
-              <Link to="/category/chai" className="px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-full text-primary text-sm font-medium transition-colors">
-                Chai
-              </Link>
-              <Link to="/category/drinks" className="px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-full text-primary text-sm font-medium transition-colors">
-                Drinks
-              </Link>
-              <Link to="/category/fast-food" className="px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-full text-primary text-sm font-medium transition-colors">
-                Fast Food
-              </Link>
-            </div>
-          </div>
-        </div>
-
         <div className="container mx-auto px-6 py-12">
-          <CategorySection title="Lassi" imageUrl={lassiImage}>
-            <div className="flex justify-between items-center mb-6">
-              <div className="flex-1">
-                <p className="text-gray-500">Refreshing yogurt-based drinks with various flavors</p>
-              </div>
-              <Link to="/category/lassi" className="text-primary hover:underline">
-                View all
-              </Link>
-            </div>
-            {categoryData.drinks.slice(0, 4).map((product) => (
+  
+        <CategorySection title="Fast Food" imageUrl={fastFoodImage}>
+            {categoryData.fastFood.map((product) => (
               <ProductCard 
                 key={product.id}
                 id={product.id}
-                name={`${["Mango", "Rose", "Sweet", "Salted"][Math.floor(Math.random() * 4)]} Lassi`}
+                name={product.name}
                 description={product.description}
                 price={product.price}
                 imageUrl={product.image}
               />
             ))}
           </CategorySection>
-
           <CategorySection title="Biryani" imageUrl={biryaniImage}>
-            <div className="flex justify-between items-center mb-6">
-              <div className="flex-1">
-                <p className="text-gray-500">Aromatic rice dishes with various flavors and spices</p>
-              </div>
-              <Link to="/category/biryani" className="text-primary hover:underline">
-                View all
-              </Link>
-            </div>
+       
             {categoryData.mainCourse.slice(0, 4).map((product) => (
               <ProductCard 
                 key={product.id}
@@ -112,6 +65,19 @@ const Menu = () => {
               />
             ))}
           </CategorySection>
+          <CategorySection title="Lassi" imageUrl={lassiImage}>
+          
+          {categoryData.drinks.slice(0, 4).map((product) => (
+            <ProductCard 
+              key={product.id}
+              id={product.id}
+              name={`${["Mango", "Rose", "Sweet", "Salted"][Math.floor(Math.random() * 4)]} Lassi`}
+              description={product.description}
+              price={product.price}
+              imageUrl={product.image}
+            />
+          ))}
+        </CategorySection>
           <CategorySection title="Burgers" imageUrl={burgerImage}>
             {burgers.map((product) => (
               <ProductCard 
@@ -136,19 +102,7 @@ const Menu = () => {
               />
             ))}
           </CategorySection>
-        
-          <CategorySection title="Fast Food" imageUrl={fastFoodImage}>
-            {categoryData.fastFood.map((product) => (
-              <ProductCard 
-                key={product.id}
-                id={product.id}
-                name={product.name}
-                description={product.description}
-                price={product.price}
-                imageUrl={product.image}
-              />
-            ))}
-          </CategorySection>
+      
           <CategorySection title="Starters" imageUrl={startersImage}>
             {categoryData.starters.map((product) => (
               <ProductCard 

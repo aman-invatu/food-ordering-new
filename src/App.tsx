@@ -15,7 +15,8 @@ import PageLoader from "@/components/ui/page-loader";
 
 // Pages
 import Index from "@/pages/Index";
-import Menu from "@/pages/Menu";
+import Menu1 from "@/pages/Menu1";
+import Menu2 from "@/pages/menu2/Menu2";
 import Restaurants from "@/pages/Restaurants";
 import RestaurantDetail from "@/pages/RestaurantDetail";
 import Cart from "@/pages/Cart";
@@ -84,7 +85,8 @@ const App = () => {
               <main className="flex-1">
                 <Routes>
                   <Route path="/" element={<Index />} />
-                  <Route path="/menu" element={<Menu />} />
+                  <Route path="/menu1" element={<Menu1 />} />
+                  <Route path="/menu2" element={<Menu2 />} />
                   <Route path="/restaurants" element={<Restaurants />} />
                   <Route path="/restaurant/:id" element={<RestaurantDetail />} />
                   <Route path="/cart" element={<Cart />} />
