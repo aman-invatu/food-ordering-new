@@ -1723,6 +1723,88 @@ export const cuisineData = {
       preparationTime: "10 mins",
       category: "Appetizer"
     }
+  ],
+  mexican: [
+    {
+      id: "m1",
+      name: "Street Tacos",
+      image: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?ixlib=rb-4.0.3",
+      price: 12.99,
+      description: "Authentic street-style tacos with your choice of meat, topped with fresh cilantro, onions, and lime.",
+      rating: 4.8,
+      preparationTime: "15 mins",
+      category: "Tacos"
+    },
+    {
+      id: "m2",
+      name: "Chicken Burrito",
+      image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-4.0.3",
+      price: 14.99,
+      description: "Large flour tortilla filled with grilled chicken, rice, beans, cheese, and fresh vegetables.",
+      rating: 4.7,
+      preparationTime: "20 mins",
+      category: "Burritos"
+    },
+    {
+      id: "m3",
+      name: "Beef Enchiladas",
+      image: "https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3",
+      price: 16.99,
+      description: "Corn tortillas filled with seasoned beef, smothered in enchilada sauce and melted cheese.",
+      rating: 4.9,
+      preparationTime: "25 mins",
+      category: "Enchiladas"
+    },
+    {
+      id: "m4",
+      name: "Chiles Rellenos",
+      image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-4.0.3",
+      price: 13.99,
+      description: "Poblano peppers stuffed with cheese, battered and fried, served with ranchero sauce.",
+      rating: 4.6,
+      preparationTime: "18 mins",
+      category: "Main Course"
+    },
+    {
+      id: "m5",
+      name: "Guacamole",
+      image: "https://images.unsplash.com/photo-1582169296194-4d644c384f79?ixlib=rb-4.0.3",
+      price: 8.99,
+      description: "Freshly made guacamole with ripe avocados, tomatoes, onions, cilantro, and lime juice.",
+      rating: 4.8,
+      preparationTime: "10 mins",
+      category: "Appetizer"
+    },
+    {
+      id: "m6",
+      name: "Churros",
+      image: "https://images.unsplash.com/photo-1582169296194-4d644c384f79?ixlib=rb-4.0.3",
+      price: 7.99,
+      description: "Crispy fried dough pastries dusted with cinnamon sugar, served with chocolate dipping sauce.",
+      rating: 4.9,
+      preparationTime: "12 mins",
+      category: "Desserts"
+    },
+    {
+      id: "m7",
+      name: "Quesadilla",
+      image: "https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3",
+      price: 11.99,
+      description: "Grilled flour tortilla filled with melted cheese and your choice of meat or vegetables.",
+      rating: 4.7,
+      preparationTime: "15 mins",
+      category: "Appetizer"
+    },
+    {
+      id: "m8",
+      name: "Flan",
+      image: "https://images.unsplash.com/photo-1582169296194-4d644c384f79?ixlib=rb-4.0.3",
+      price: 6.99,
+      description: "Creamy caramel custard dessert, a classic Mexican sweet treat.",
+      rating: 4.8,
+      preparationTime: "8 mins",
+      category: "Desserts"
+    }
   ]
 };
 

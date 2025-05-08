@@ -31,6 +31,10 @@ import ChineseCuisine from "@/pages/cuisines/ChineseCuisine";
 import AmericanCuisine from "./pages/cuisines/AmericalCuisine";
 import FrenchCuisine from "./pages/cuisines/FrenchCuisine";
 import ItalianCuisine from "./pages/cuisines/ItalianCuisine"
+import MexicanCuisine from "./pages/cuisines/MexicanCuisine";
+import JapaneseCuisine from "./pages/cuisines/JapaneseCuisine"
+import ThaiCuisine from "./pages/cuisines/ThaiCuisine";
+import KoreanCuisine from "./pages/cuisines/KoreanCuisines";
 
 // Category Pages
 import FastFoodCategory from "@/pages/categories/FastFoodCategory";
@@ -74,12 +78,12 @@ const App = () => (
                 <Route path="/cuisine/chinese" element={<ChineseCuisine />} />
                 <Route path="/cuisine/american" element={<AmericanCuisine />} /> 
                 <Route path="/cuisine/italian" element={<ItalianCuisine />} /> 
-                <Route path="/cuisine/mexican" element={<ChineseCuisine />} /> 
-                <Route path="/cuisine/japanese" element={<IndianCuisine />} /> 
-                <Route path="/cuisine/thai" element={<ChineseCuisine />} /> 
+                <Route path="/cuisine/mexican" element={<MexicanCuisine />} /> 
+                <Route path="/cuisine/japanese" element={<JapaneseCuisine />} /> 
+                <Route path="/cuisine/thai" element={<ThaiCuisine />} /> 
                 <Route path="/cuisine/mediterranean" element={<IndianCuisine />} /> 
                 <Route path="/cuisine/french" element={<FrenchCuisine />} /> 
-                <Route path="/cuisine/korean" element={<ChineseCuisine />} /> 
+                <Route path="/cuisine/korean" element={<KoreanCuisine />} /> 
                 
                 {/* Category Routes */}
                 <Route path="/category/fast-food" element={<FastFoodCategory />} />
