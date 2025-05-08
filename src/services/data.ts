@@ -836,6 +836,88 @@ export const categoryData = {
       category: "Hot Drinks"
     }
   ],
+  chai: [
+    {
+      id: 'ch1',
+      name: 'Masala Chai',
+      image: 'https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=800&q=80',
+      price: 4.50,
+      description: 'Traditional Indian spiced tea with ginger, cardamom, and cinnamon.',
+      rating: 4.9,
+      preparationTime: '5 mins',
+      category: 'Hot Chai'
+    },
+    {
+      id: 'ch2',
+      name: 'Kashmiri Kahwa',
+      image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      price: 5.00,
+      description: 'Green tea with saffron, cardamom, and almonds.',
+      rating: 4.8,
+      preparationTime: '6 mins',
+      category: 'Special Chai'
+    },
+    {
+      id: 'ch3',
+      name: 'Ginger Chai',
+      image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      price: 4.00,
+      description: 'Strong black tea with fresh ginger and honey.',
+      rating: 4.7,
+      preparationTime: '5 mins',
+      category: 'Hot Chai'
+    },
+    {
+      id: 'ch4',
+      name: 'Iced Chai Latte',
+      image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      price: 5.50,
+      description: 'Chilled spiced tea with milk and ice.',
+      rating: 4.6,
+      preparationTime: '4 mins',
+      category: 'Iced Chai'
+    },
+    {
+      id: 'ch5',
+      name: 'Tulsi Chai',
+      image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      price: 4.50,
+      description: 'Holy basil tea with ginger and honey.',
+      rating: 4.8,
+      preparationTime: '5 mins',
+      category: 'Herbal Chai'
+    },
+    {
+      id: 'ch6',
+      name: 'Elaichi Chai',
+      image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      price: 4.00,
+      description: 'Cardamom-infused black tea with milk.',
+      rating: 4.7,
+      preparationTime: '5 mins',
+      category: 'Hot Chai'
+    },
+    {
+      id: 'ch7',
+      name: 'Rose Chai',
+      image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      price: 5.00,
+      description: 'Black tea with rose petals and cardamom.',
+      rating: 4.9,
+      preparationTime: '6 mins',
+      category: 'Special Chai'
+    },
+    {
+      id: 'ch8',
+      name: 'Adrak Chai',
+      image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      price: 4.00,
+      description: 'Strong ginger tea with black pepper and honey.',
+      rating: 4.8,
+      preparationTime: '5 mins',
+      category: 'Hot Chai'
+    }
+  ],
   lunch: [
     {
       id: "d1",

@@ -44,6 +44,7 @@ import DinnerCategory from "@/pages/categories/DinnerCategory";
 import CoffeeCategory from "./pages/categories/CoffeeCategory";
 import BreakFastCategory from "./pages/categories/BreakFastCategory";
 import SnacksCategory from "./pages/categories/SnacksCategory";
+import ChaiCategory from "./pages/categories/ChaiCategory"
 
 
 
@@ -92,7 +93,8 @@ const App = () => (
                 <Route path="/category/lunch" element={<LunchCategory />} /> 
                 <Route path="/category/coffee" element={<CoffeeCategory />} /> 
                 <Route path="/category/breakfast" element={<BreakFastCategory />} /> 
-                  <Route path="/category/snacks" element={<SnacksCategory />} /> 
+                <Route path="/category/snacks" element={<SnacksCategory />} /> 
+                <Route path="/category/chai" element={<ChaiCategory />} /> 
        
                 <Route path="*" element={<NotFound />} />
               </Routes>
