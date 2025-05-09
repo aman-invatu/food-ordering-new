@@ -17,6 +17,12 @@ import PageLoader from "@/components/ui/page-loader";
 import Index from "@/pages/Index";
 import Menu1 from "@/pages/Menu1";
 import Menu2 from "@/pages/menu2/Menu2";
+import Menu3 from "@/pages/Menu3";
+import Menu4 from "@/pages/Menu4";
+import Menu5 from "@/pages/Menu5";
+import Menu6 from "@/pages/Menu6";
+import Menu7 from "@/pages/Menu7";
+import Menu8 from "@/pages/Menu8";
 import Restaurants from "@/pages/Restaurants";
 import RestaurantDetail from "@/pages/RestaurantDetail";
 import Cart from "@/pages/Cart";
@@ -86,6 +92,12 @@ const App = () => {
                   <Route path="/" element={<Index />} />
                   <Route path="/menu1" element={<Menu1 />} />
                   <Route path="/menu2" element={<Menu2 />} />
+                  <Route path="/menu3" element={<Menu3 />} />
+                  <Route path="/menu4" element={<Menu4 />} />
+                  <Route path="/menu5" element={<Menu5 />} />
+                  <Route path="/menu6" element={<Menu6 />} />
+                  <Route path="/menu7" element={<Menu7 />} />
+                  <Route path="/menu8" element={<Menu8 />} />
                   <Route path="/restaurants" element={<Restaurants />} />
                   <Route path="/restaurant/:id" element={<RestaurantDetail />} />
                   <Route path="/cart" element={<Cart />} />

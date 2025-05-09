@@ -1,9 +1,18 @@
 
 import { Link } from "react-router-dom";
-import { MapPin, ShoppingCart, User } from "lucide-react";
+import { MapPin, ShoppingCart, User, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FoodCategoriesMenu from "./FoodCategoriesMenu";
 import CuisinesMenu from "./CuisinesMenu";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 interface DesktopNavProps {
   totalItems: number;
@@ -23,12 +32,30 @@ const DesktopNav = ({ totalItems, foodCategories, cuisines }: DesktopNavProps) =
         <FoodCategoriesMenu categories={foodCategories} />
         <CuisinesMenu cuisines={cuisines} />
 
-        <Link to="/menu1" className="menu-item">
-          Menu1
-        </Link>
-        <Link to="/menu2" className="menu-item">
-          Menu2
-        </Link>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  {[...Array(8)].map((_, i) => (
+                    <Link
+                      key={`menu${i+1}`}
+                      to={`/menu${i+1}`}
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                    >
+                      <div className="text-sm font-medium leading-none">Menu {i+1}</div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        Explore our Menu {i+1} collection
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+
         <Link to="/restaurants" className="menu-item">
           Restaurants
         </Link>
@@ -42,10 +69,6 @@ const DesktopNav = ({ totalItems, foodCategories, cuisines }: DesktopNavProps) =
 
       {/* Desktop Actions */}
       <div className="hidden md:flex items-center space-x-4">
-        {/* <Button variant="ghost" className="flex items-center text-gray-600">
-          <MapPin className="mr-1 h-4 w-4" />
-          <span>Set Location</span>
-        </Button> */}
         <Link to="/cart" className="relative">
           <Button variant="outline" className="flex items-center">
             <ShoppingCart className="mr-1 h-5 w-5" />

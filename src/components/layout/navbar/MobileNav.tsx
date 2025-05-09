@@ -65,9 +65,21 @@ const MobileNav = ({
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <Link to="/menu" className="text-lg font-medium" onClick={handleItemClick}>
-          Menu
-        </Link>
+        <DropdownMenu>
+          <DropdownMenuTrigger className="flex items-center text-lg font-medium">
+            Menu <ChevronDown className="ml-1 h-4 w-4" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            {[...Array(8)].map((_, i) => (
+              <DropdownMenuItem key={`menu${i+1}`} asChild>
+                <Link to={`/menu${i+1}`} onClick={handleItemClick}>
+                  Menu {i+1}
+                </Link>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
         <Link to="/restaurants" className="text-lg font-medium" onClick={handleItemClick}>
           Restaurants
         </Link>
@@ -77,10 +89,6 @@ const MobileNav = ({
         <Link to="/orders" className="text-lg font-medium" onClick={handleItemClick}>
           My Orders
         </Link>
-        <div className="flex items-center pt-2">
-          <MapPin className="mr-2 h-4 w-4" />
-          <span>Set Location</span>
-        </div>
         <div className="flex space-x-4 pt-2">
           <Link 
             to="/cart" 
