@@ -38,7 +38,7 @@ const DesktopNav = ({ totalItems, foodCategories, cuisines }: DesktopNavProps) =
               <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[400px]">
-                  {[...Array(9)].map((_, i) => (
+                  {[...Array(10)].map((_, i) => (
                     <Link
                       key={`menu${i+1}`}
                       to={`/menu${i+1}`}

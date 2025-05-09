@@ -4,23 +4,18 @@ import { useCart } from "@/context/CartContext";
 import { ShoppingCart, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const sectionImages = {
-  "Main Dishes": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-  Sides: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3",
-  Appetizers: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?ixlib=rb-4.0.3",
-  Desserts: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
-};
-
-const sections = [
-  { key: "mainCourse", label: "Main Dishes", image: sectionImages["Main Dishes"] },
-  { key: "starters", label: "Appetizers", image: sectionImages["Appetizers"] },
-  { key: "fastFood", label: "Sides", image: sectionImages["Sides"] },
-  { key: "drinks", label: "Desserts", image: sectionImages["Desserts"] },
-];
-
-const Menu8 = () => {
+const Menu9 = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const { addToCart } = useCart();
+
+  // Only drinks category
+  const drinks = categoryData["drinks"] || [];
+
+  // For the hero section, pick the first drink as the main image
+  const heroDrink = drinks[0];
+
+  // For the special recipe cards, pick the next three drinks (or repeat if not enough)
+  const specialRecipes = drinks.slice(1, 4).length === 3 ? drinks.slice(1, 4) : Array(3).fill(drinks[1] || drinks[0]);
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -36,100 +31,104 @@ const Menu8 = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#101718] pb-24">
-      {/* Hero Card */}
-      <div className="max-w-6xl mx-auto px-4 pt-12">
-        <div className="bg-[#162124] rounded-2xl p-12 mb-16 flex flex-col items-center justify-center text-center">
-          <h1 className="text-6xl font-serif font-bold text-white mb-6">Our Menu9</h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
-            Figma ipsum component variant main layer. Asset bullet project prototype draft main. Content vertical figjam slice pixel undo bold draft ipsum underline.
+    <div className="min-h-screen bg-[#fafafa] text-gray-900">
+      {/* Hero Section */}
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 py-16 items-center">
+        <div className="flex-1 flex justify-center">
+          <img
+            src={heroDrink?.image}
+            alt={heroDrink?.name}
+            className="rounded-2xl shadow-xl object-cover w-[400px] h-[400px]"
+          />
+        </div>
+        <div className="flex-1">
+          <div className="mb-2 text-pink-500 font-medium">About</div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-sans">Welcome to Resto</h1>
+          <p className="mb-8 text-gray-700 max-w-xl">
+            On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
           </p>
+          <div>
+            <h2 className="text-2xl font-bold mb-4 font-sans">Special Recipe</h2>
+            <div className="flex gap-6">
+              {specialRecipes.map((item, idx) => (
+                <div key={idx} className="flex flex-col items-center">
+                  <img
+                    src={item?.image}
+                    alt={item?.name}
+                    className="w-32 h-32 object-cover rounded-xl shadow-md mb-2"
+                  />
+                  <div className="text-pink-500 font-medium text-center">{item?.name}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Menu Sections */}
-      <div className="max-w-6xl mx-auto px-4 flex flex-col gap-24">
-        {sections.map((section, idx) => {
-          const products = categoryData[section.key] || [];
-          return (
-            <div key={section.key} className="flex flex-col md:flex-row md:items-start gap-12">
-              {/* Section Image */}
-              <div className="md:w-1/2 flex-shrink-0 flex justify-center items-center">
+      {/* Special Dishes/Drinks Section */}
+      <div className="max-w-6xl mx-auto py-12">
+        <h2 className="text-3xl font-bold text-center mb-12 font-sans">Special Drinks</h2>
+        <div className="flex flex-col gap-20">
+          {drinks.map((item, idx) => (
+            <div key={item.id} className={`flex flex-col md:flex-row ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''} items-center gap-12`}>
+              <div className="flex-1 flex justify-center">
                 <img
-                  src={section.image}
-                  alt={section.label}
-                  className="rounded-2xl w-full max-w-md h-96 object-cover shadow-lg"
+                  src={item.image}
+                  alt={item.name}
+                  className="rounded-2xl shadow-xl object-cover w-[350px] h-[350px]"
                 />
               </div>
-              {/* Menu Items */}
-              <div className="md:w-1/2 w-full">
-                <h2 className="text-5xl font-serif font-bold text-white mb-8">{section.label}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                  {products.map((item) => (
-                    <div
-                      key={item.id}
-                      className="mb-6 cursor-pointer group"
-                      onClick={() => handleProductClick(item)}
-                    >
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="text-2xl font-serif font-semibold text-white">{item.name}</span>
-                        <span className="text-2xl font-serif font-bold text-white">${item.price}</span>
-                      </div>
-                      <div className="text-gray-300 text-lg font-light mb-2">{item.description}</div>
-                      {/* Floating Cart Button */}
-                      <button
-                        className="opacity-0 group-hover:opacity-100 bg-white/80 border border-amber-600 text-amber-700 rounded-lg p-2 shadow-lg transition-all duration-300"
-                        style={{ backdropFilter: 'blur(4px)' }}
-                        onClick={e => { e.stopPropagation(); handleProductClick(item); }}
-                      >
-                        <ShoppingCart className="w-5 h-5" />
-                      </button>
-                    </div>
-                  ))}
+              <div className="flex-1 max-w-xl">
+                <div className="flex items-center mb-2">
+                  <span className="text-4xl font-bold mr-4 font-sans">{(idx+1).toString().padStart(2, '0')}.</span>
+                  <div className="flex-1 h-px bg-gray-400" />
                 </div>
+                <div className="mb-2 text-pink-500 text-xl font-medium font-sans">{item.name}</div>
+                <div className="text-2xl font-bold mb-2 font-sans">{item.category}</div>
+                <p className="mb-4 text-gray-700">{item.description}</p>
+                <div className="text-2xl font-bold mb-4">${item.price}</div>
+                <Button
+                  onClick={() => handleProductClick(item)}
+                  className="bg-pink-500 hover:bg-pink-600 text-white rounded-full px-8 py-3 text-lg font-semibold shadow-md"
+                >
+                  Add to Cart
+                </Button>
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
 
       {/* Product Modal */}
       {selectedProduct && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-gray-800 rounded-2xl max-w-4xl w-full overflow-hidden">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-gray-200">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 relative">
                 <img 
                   src={selectedProduct.image} 
                   alt={selectedProduct.name} 
-                  className="w-full h-full object-cover max-h-96"
+                  className="w-full h-full object-cover max-h-[400px]"
                 />
               </div>
               <div className="p-8 md:w-1/2">
                 <div className="flex justify-between items-start mb-4">
-                  <h2 className="text-3xl font-bold text-white">{selectedProduct.name}</h2>
+                  <h2 className="text-2xl font-bold text-gray-900">{selectedProduct.name}</h2>
                   <button 
                     onClick={closeModal} 
-                    className="text-gray-400 hover:text-white"
+                    className="text-gray-400 hover:text-gray-700 transition-colors"
                   >
                     <X className="h-6 w-6" />
                   </button>
                 </div>
-                <div className="mb-4">
-                  <span className="inline-block bg-purple-900/50 text-purple-300 text-sm px-3 py-1 rounded-full">
-                    {selectedProduct.category}
-                  </span>
-                </div>
-                <p className="text-gray-300 mb-6 text-lg">{selectedProduct.description}</p>
-                <div className="flex justify-between items-center mb-6">
-                  <div className="text-3xl font-bold text-white">${selectedProduct.price}</div>
-                  <div className="text-sm text-gray-400">Available Now</div>
-                </div>
+                <div className="mb-2 text-pink-500 text-sm font-medium">{selectedProduct.category}</div>
+                <p className="text-gray-700 mb-6 text-base">{selectedProduct.description}</p>
+                <div className="text-2xl font-bold text-gray-900 mb-6">${selectedProduct.price}</div>
                 <Button 
                   onClick={handleAddToCart}
-                  className="w-full py-4 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-medium rounded-xl transition-colors text-lg"
+                  className="w-full py-3 bg-pink-500 hover:bg-pink-600 text-white font-medium rounded-xl transition-all text-lg"
                 >
-                  <ShoppingCart className="w-6 h-6 mr-2" />
+                  <ShoppingCart className="w-5 h-5 mr-2" />
                   Add to Cart
                 </Button>
               </div>
@@ -141,4 +140,4 @@ const Menu8 = () => {
   );
 };
 
-export default Menu8;
+export default Menu9; 

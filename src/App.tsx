@@ -24,6 +24,7 @@ import Menu6 from "@/pages/menu/Menu6";
 import Menu7 from "@/pages/menu/Menu7";
 import Menu8 from "@/pages/menu/Menu8";
 import Menu9 from "@/pages/menu/Menu9";
+import Menu10 from "@/pages/menu/Menu10";
 import Restaurants from "@/pages/Restaurants";
 import RestaurantDetail from "@/pages/RestaurantDetail";
 import Cart from "@/pages/Cart";
@@ -100,6 +101,7 @@ const App = () => {
                   <Route path="/menu7" element={<Menu7 />} />
                   <Route path="/menu8" element={<Menu8 />} />
                   <Route path="/menu9" element={<Menu9 />} />
+                  <Route path="/menu10" element={<Menu10 />} />
                   <Route path="/restaurants" element={<Restaurants />} />
                   <Route path="/restaurant/:id" element={<RestaurantDetail />} />
                   <Route path="/cart" element={<Cart />} />
