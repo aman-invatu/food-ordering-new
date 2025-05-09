@@ -1,5 +1,5 @@
 
-import CategorySection from "./categories/CategorySection";
+import CategorySection from "../categories/CategorySection";
 import ProductCard from "@/components/products/ProductCard";
 import { categoryData } from "@/services/data";
 import { Link } from "react-router-dom";

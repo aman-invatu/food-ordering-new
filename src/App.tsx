@@ -15,14 +15,14 @@ import PageLoader from "@/components/ui/page-loader";
 
 // Pages
 import Index from "@/pages/Index";
-import Menu1 from "@/pages/Menu1";
-import Menu2 from "@/pages/menu2/Menu2";
-import Menu3 from "@/pages/Menu3";
-import Menu4 from "@/pages/Menu4";
-import Menu5 from "@/pages/Menu5";
-import Menu6 from "@/pages/Menu6";
-import Menu7 from "@/pages/Menu7";
-import Menu8 from "@/pages/Menu8";
+import Menu1 from "@/pages/menu/Menu1";
+import Menu2 from "@/pages/menu/menu2/Menu2";
+import Menu3 from "@/pages/menu/Menu3";
+import Menu4 from "@/pages/menu/Menu4";
+import Menu5 from "@/pages/menu/Menu5";
+import Menu6 from "@/pages/menu/Menu6";
+import Menu7 from "@/pages/menu/Menu7";
+import Menu8 from "@/pages/menu/Menu8";
 import Restaurants from "@/pages/Restaurants";
 import RestaurantDetail from "@/pages/RestaurantDetail";
 import Cart from "@/pages/Cart";

@@ -37,7 +37,7 @@ const DesktopNav = ({ totalItems, foodCategories, cuisines }: DesktopNavProps) =
             <NavigationMenuItem>
               <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[400px]">
                   {[...Array(8)].map((_, i) => (
                     <Link
                       key={`menu${i+1}`}
@@ -45,9 +45,9 @@ const DesktopNav = ({ totalItems, foodCategories, cuisines }: DesktopNavProps) =
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-medium leading-none">Menu {i+1}</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      {/* <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                         Explore our Menu {i+1} collections
-                      </p>
+                      </p> */}
                     </Link>
                   ))}
                 </div>
