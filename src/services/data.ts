@@ -2086,3 +2086,211 @@ export const dinnerCategoryImages = {
   drinks: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80"
 };
 
+// Paneer Dishes Data
+export const paneerData = [
+  {
+    id: "p1",
+    name: "Butter Paneer",
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3",
+    price: 14.99,
+    description: "Creamy tomato-based curry with soft paneer cubes, finished with butter and cream.",
+    rating: 4.8,
+    preparationTime: "20 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p2",
+    name: "Kadai Paneer",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    price: 13.99,
+    description: "Paneer cubes cooked with bell peppers, onions, and aromatic spices in a kadai style.",
+    rating: 4.7,
+    preparationTime: "18 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p3",
+    name: "Palak Paneer",
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3",
+    price: 12.99,
+    description: "Fresh spinach puree with soft paneer cubes, seasoned with Indian spices.",
+    rating: 4.6,
+    preparationTime: "15 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p4",
+    name: "Shahi Paneer",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    price: 15.99,
+    description: "Royal-style paneer in a rich, creamy gravy with nuts and aromatic spices.",
+    rating: 4.9,
+    preparationTime: "25 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p5",
+    name: "Paneer Tikka",
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3",
+    price: 11.99,
+    description: "Marinated paneer cubes grilled to perfection with bell peppers and onions.",
+    rating: 4.8,
+    preparationTime: "20 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p6",
+    name: "Paneer Makhani",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    price: 14.99,
+    description: "Paneer in a rich, buttery tomato gravy with cream and aromatic spices.",
+    rating: 4.7,
+    preparationTime: "22 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p7",
+    name: "Paneer Do Pyaza",
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3",
+    price: 13.99,
+    description: "Paneer cooked with double onions and aromatic spices in a rich gravy.",
+    rating: 4.6,
+    preparationTime: "18 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p8",
+    name: "Paneer Lababdar",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    price: 15.99,
+    description: "Paneer in a rich, creamy gravy with cashews and aromatic spices.",
+    rating: 4.8,
+    preparationTime: "25 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p9",
+    name: "Paneer Chilli",
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3",
+    price: 12.99,
+    description: "Crispy fried paneer tossed in a spicy, tangy sauce with bell peppers and onions.",
+    rating: 4.7,
+    preparationTime: "15 mins",
+    category: "Paneer"
+  },
+  {
+    id: "p10",
+    name: "Paneer Pasanda",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    price: 16.99,
+    description: "Stuffed paneer slices in a rich, creamy gravy with nuts and aromatic spices.",
+    rating: 4.9,
+    preparationTime: "30 mins",
+    category: "Paneer"
+  }
+];
+
+// Pickle Dishes Data
+export const pickleData = [
+  {
+    id: "pk1",
+    name: "Mango Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 8.99,
+    description: "Traditional raw mango pickle with mustard oil and aromatic spices.",
+    rating: 4.8,
+    preparationTime: "7 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk2",
+    name: "Lemon Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 7.99,
+    description: "Tangy lemon pickle with fenugreek and red chili powder.",
+    rating: 4.7,
+    preparationTime: "5 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk3",
+    name: "Mixed Vegetable Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 9.99,
+    description: "Assorted vegetables pickled in mustard oil with traditional spices.",
+    rating: 4.6,
+    preparationTime: "10 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk4",
+    name: "Green Chili Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 8.49,
+    description: "Spicy green chilies pickled with mustard seeds and garlic.",
+    rating: 4.9,
+    preparationTime: "7 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk5",
+    name: "Garlic Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 8.99,
+    description: "Whole garlic cloves pickled in mustard oil with red chili powder.",
+    rating: 4.8,
+    preparationTime: "8 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk6",
+    name: "Carrot Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 7.49,
+    description: "Crunchy carrot pickle with mustard seeds and turmeric.",
+    rating: 4.7,
+    preparationTime: "5 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk7",
+    name: "Ginger Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 8.99,
+    description: "Spicy ginger pickle with lemon juice and green chilies.",
+    rating: 4.8,
+    preparationTime: "6 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk8",
+    name: "Red Chili Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 8.49,
+    description: "Whole red chilies pickled in mustard oil with garlic.",
+    rating: 4.9,
+    preparationTime: "7 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk9",
+    name: "Cauliflower Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 7.99,
+    description: "Cauliflower florets pickled with mustard seeds and turmeric.",
+    rating: 4.6,
+    preparationTime: "6 days",
+    category: "Pickle"
+  },
+  {
+    id: "pk10",
+    name: "Mixed Fruit Pickle",
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3",
+    price: 9.99,
+    description: "Assorted fruits pickled in mustard oil with traditional spices.",
+    rating: 4.7,
+    preparationTime: "12 days",
+    category: "Pickle"
+  }
+];
+

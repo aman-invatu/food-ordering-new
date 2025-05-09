@@ -53,7 +53,6 @@ import LassiCategory from "./pages/categories/LassiCategory";
 import BiryaniCategory from "./pages/categories/BiryaniCategory";
 import PaneerCategory from "./pages/categories/PaneerCategory";
 import PickleCategory from "./pages/categories/PickleCategory";
-import SaladCategory from "./pages/categories/SaladCategory";
 
 const queryClient = new QueryClient();
 
@@ -123,8 +122,6 @@ const App = () => {
                   <Route path="/category/biryani" element={<BiryaniCategory />} />
                   <Route path="/category/paneer" element={<PaneerCategory />} />
                   <Route path="/category/pickle" element={<PickleCategory />} />
-                  <Route path="/category/salad" element={<SaladCategory />} />
-         
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>

@@ -1,21 +1,13 @@
-
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
-import { categoryData } from "@/services/data";
+import { pickleData } from "@/services/data";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Button } from "@/components/ui/button";
+import { Clock, Star, ShoppingCart, X, ChevronRight, ChevronLeft } from "lucide-react";
 
 const PickleCategory = () => {
   const [selectedPickle, setSelectedPickle] = useState(null);
   const { addToCart } = useCart();
-
-  // Using starters data as a base for pickle items
-  const pickleItems = categoryData.starters.map((item, index) => ({
-    ...item,
-    id: `pickle-${index}`,
-    name: `${["Mango", "Lemon", "Mixed", "Chili", "Garlic", "Carrot", "Ginger"][index % 7]} Pickle`,
-    description: `Authentic homemade ${["mango", "lemon", "mixed vegetable", "chili", "garlic", "carrot", "ginger"][index % 7]} pickle made with traditional spices and recipes.`,
-    price: Math.floor(index % 3 + 1) * 2 + 4.99,
-    category: "Pickle"
-  }));
 
   const handlePickleClick = (pickle) => {
     setSelectedPickle(pickle);
@@ -31,61 +23,121 @@ const PickleCategory = () => {
   };
 
   return (
-    <div className="min-h-screen bg-amber-50 py-16">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-amber-900 mb-2">Artisanal Pickle Collection</h1>
-          <p className="text-amber-800 text-lg max-w-2xl mx-auto">
-            Discover our range of handcrafted artisanal pickles, made with traditional recipes and the finest ingredients
-          </p>
-        </div>
-
-        {/* Banner Section */}
-        <div className="relative h-80 mb-20 rounded-xl overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
+      {/* Hero Section with Parallax */}
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1627308595261-4a8d65800541?auto=format&fit=crop&w=2000&q=80"
-            alt="Assorted Pickles" 
-            className="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=2000&q=80"
+            alt="Pickle Collection" 
+            className="w-full h-full object-cover transform scale-110 animate-subtle-zoom"
           />
-          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <h2 className="text-4xl font-bold text-white">Handcrafted with Love</h2>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         </div>
+        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+          <h1 className="text-6xl md:text-7xl font-serif mb-6 tracking-tight animate-fade-in">
+            Artisanal Pickles
+          </h1>
+          <p className="text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed animate-fade-in-delay">
+            Discover our handcrafted collection of traditional pickles, made with authentic recipes and premium ingredients
+          </p>
+          <Button className="mt-8 bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full text-lg animate-fade-in-delay-2">
+            Explore Collection
+          </Button>
+        </div>
+      </section>
 
-        {/* Pickle Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {pickleItems.map((pickle) => (
-            <div 
-              key={pickle.id} 
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-              onClick={() => handlePickleClick(pickle)}
-            >
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={pickle.image} 
-                  alt={pickle.name} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-amber-900 mb-2">{pickle.name}</h3>
-                <p className="text-amber-700 text-sm mb-4 line-clamp-2">{pickle.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-amber-600 font-bold">${pickle.price.toFixed(2)}</span>
-                  <span className="text-xs bg-amber-100 px-2 py-1 rounded-full text-amber-800">
-                    {pickle.category}
-                  </span>
+      {/* Featured Items Section */}
+      <section className="py-20 px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-serif text-center mb-16 text-amber-900">Featured Pickles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pickleData.slice(0, 3).map((pickle) => (
+              <div 
+                key={pickle.id}
+                className="group relative overflow-hidden rounded-2xl bg-white shadow-xl transition-all duration-300 hover:shadow-2xl"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={pickle.image} 
+                    alt={pickle.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-semibold text-amber-900">{pickle.name}</h3>
+                    <span className="text-amber-600 font-bold text-xl">${pickle.price.toFixed(2)}</span>
+                  </div>
+                  <p className="text-amber-700 mb-4">{pickle.description}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <Clock className="w-5 h-5 text-amber-600" />
+                      <span className="text-amber-600">{pickle.preparationTime}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-5 h-5 text-amber-500 fill-amber-500" />
+                      <span className="text-amber-600">{pickle.rating}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Modal for pickle details */}
+      {/* Main Grid Section */}
+      <section className="py-20 px-8 bg-gradient-to-b from-white to-amber-50">
+        <div className="max-w-7xl mx-auto">
+          {/* Category Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif text-amber-900 mb-4">Our Collection</h2>
+            <p className="text-amber-700 max-w-2xl mx-auto">
+              Explore our diverse range of handcrafted pickles, each made with traditional recipes and premium ingredients
+            </p>
+          </div>
+
+          {/* Pure Gallery Grid, no card */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pickleData.map((pickle) => (
+              <div
+                key={pickle.id}
+                className="relative group cursor-pointer"
+                onClick={() => handlePickleClick(pickle)}
+              >
+                <img
+                  src={pickle.image}
+                  alt={pickle.name}
+                  className="w-full h-72 object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Minimal Overlay, not a card */}
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/30 to-transparent px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-between rounded-b-2xl">
+                  <div>
+                    <h3 className="text-white text-lg font-bold">{pickle.name}</h3>
+                    <span className="text-amber-200 font-semibold">${pickle.price.toFixed(2)}</span>
+                  </div>
+                  <button
+                    className="bg-amber-500 hover:bg-amber-600 text-white rounded-full p-2 ml-2 transition"
+                    onClick={e => {
+                      e.stopPropagation();
+                      addToCart(pickle);
+                    }}
+                  >
+                    <ShoppingCart className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Modal */}
       {selectedPickle && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl max-w-4xl w-full overflow-hidden animate-fade-in">
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-4xl w-full overflow-hidden animate-fade-in">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2">
                 <img 
@@ -96,24 +148,22 @@ const PickleCategory = () => {
               </div>
               <div className="p-8 md:w-1/2">
                 <div className="flex justify-between items-start mb-4">
-                  <h2 className="text-2xl font-bold text-amber-900">{selectedPickle.name}</h2>
+                  <h2 className="text-3xl font-bold text-amber-900">{selectedPickle.name}</h2>
                   <button 
                     onClick={closeModal} 
                     className="text-gray-500 hover:text-gray-700"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <X className="h-6 w-6" />
                   </button>
                 </div>
                 
                 <div className="mb-4">
-                  <span className="inline-block bg-amber-100 text-amber-800 text-sm px-3 py-1 rounded-full mb-4">
+                  <span className="inline-block bg-amber-100 text-amber-800 text-sm px-3 py-1 rounded-full">
                     {selectedPickle.category}
                   </span>
                 </div>
                 
-                <p className="text-gray-700 mb-6">{selectedPickle.description}</p>
+                <p className="text-gray-700 mb-6 text-lg">{selectedPickle.description}</p>
                 
                 <div className="flex items-center mb-4">
                   <div className="text-amber-500">
@@ -124,16 +174,17 @@ const PickleCategory = () => {
                 </div>
                 
                 <div className="flex justify-between items-center mb-6">
-                  <div className="text-2xl font-bold text-amber-800">${selectedPickle.price.toFixed(2)}</div>
+                  <div className="text-3xl font-bold text-amber-800">${selectedPickle.price.toFixed(2)}</div>
                   <div className="text-sm text-gray-500">Weight: 250g</div>
                 </div>
                 
-                <button 
+                <Button 
                   onClick={handleAddToCart}
-                  className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors"
+                  className="w-full py-4 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-xl transition-colors text-lg"
                 >
+                  <ShoppingCart className="w-6 h-6 mr-2" />
                   Add to Cart
-                </button>
+                </Button>
               </div>
             </div>
           </div>
