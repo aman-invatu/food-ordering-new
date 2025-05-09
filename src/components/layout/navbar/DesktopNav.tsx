@@ -46,7 +46,7 @@ const DesktopNav = ({ totalItems, foodCategories, cuisines }: DesktopNavProps) =
                     >
                       <div className="text-sm font-medium leading-none">Menu {i+1}</div>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Explore our Menu {i+1} collection
+                        Explore our Menu {i+1} collections
                       </p>
                     </Link>
                   ))}
